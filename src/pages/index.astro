@@ -1,17 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+import { slide } from "astro:transitions";
 
-interface Props {
-  title: string;
-  frontmatter: {
-    name: string;
-    location: string;
-    company: string;
-  };
-}
-
-const people = await getCollection("people");
 const { title } = Astro.props;
 ---
 
@@ -20,25 +11,51 @@ const { title } = Astro.props;
     <h1 class="text-4xl font-bold mb-12">People</h1>
 
     <div class="people flex gap-6">
-      {
-        people.map((person) => (
-          <article class="border-2 border-slate-800/75 p-4">
-            <a href={`/bio/${person.slug}`}>
-              <div>
-                <img
-                  class=" rounded-full w-40 h-40 object-cover mb-3"
-                  src={person.data.picture}
-                  alt={`Picture of ${person.data.name}`}
-                />
-              </div>
-              <div class="bg-amber-100 text-center py-4 h-24 flex-col">
-                <h4>{person.data.name}</h4>
-                <p>{person.data.company}</p>
-              </div>
-            </a>
-          </article>
-        ))
-      }
+      <article class="border-2 border-slate-800/75 p-4">
+        <a href="/jack-square">
+          <div>
+            <img
+              transition:name="jack-pfp"
+              class="rounded-full w-40 h-40 object-cover mb-3"
+              src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1146354927.jpg?crop=0.9960159362549801xw:1xh;center,top&resize=1200:*"
+            />
+          </div>
+          <div class="bg-amber-100 text-center py-4 h-24 flex-col">
+            <h4>Jack Dorsey</h4>
+            <p>Square / Block</p>
+          </div>
+        </a>
+      </article>
+      <article class="border-2 border-slate-800/75 p-4">
+        <a href="/mark-zuck">
+          <div>
+            <img
+              transition:name="zuck-pfp"
+              class="rounded-full w-40 h-40 object-cover mb-3"
+              src="https://people.com/thmb/aA--KsaFpaBaiFtbt3Nw4ZeKk24=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/mark-zuckerberg-1-2000-1123e66859e94403b843e5ae6ed368fd.jpg"
+            />
+          </div>
+          <div class="bg-amber-100 text-center py-4 h-24 flex-col">
+            <h4>Mark Zuck</h4>
+            <p>Meta</p>
+          </div>
+        </a>
+      </article>
+      <article class="border-2 border-slate-800/75 p-4">
+        <a href="/tim-apple">
+          <div>
+            <img
+              transition:name="pfp"
+              class="rounded-full w-40 h-40 object-cover mb-3"
+              src="https://images.lifestyleasia.com/wp-content/uploads/sites/6/2023/04/17155723/tim-cook-net-worth-investment-salary-apple-ceo.jpg"
+            />
+          </div>
+          <div class="bg-amber-100 text-center py-4 h-24 flex-col">
+            <h4>Tim Apple</h4>
+            <p>Apple</p>
+          </div>
+        </a>
+      </article>
     </div>
   </section>
 </Layout>
