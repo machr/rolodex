@@ -19,9 +19,12 @@ const { title } = Astro.props;
   </head>
   <ViewTransitions />
   <body>
-    <main class="p-20">
+    <main class="p-20 container mx-auto lg:max-w-8xl">
       <nav class="flex gap-4 font-bold my-10">
-        <a class="hover:underline" href="/">Home</a>
+        <a
+          class="hover:bg-gray-300 border-2 border-gray-300 rounded p-5"
+          href="/">Home</a
+        >
       </nav>
       <slot />
     </main>
