@@ -11,7 +11,7 @@ const { title } = Astro.props;
     <h1 class="text-4xl font-bold mb-12">People</h1>
 
     <div class="people flex gap-6">
-      <article class="border-2 border-slate-800/75 p-4">
+      <article class="border-2 bg-indigo-50/90 border-slate-300/75 p-4">
         <a href="/jack-square">
           <div>
             <img
@@ -20,13 +20,13 @@ const { title } = Astro.props;
               src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1146354927.jpg?crop=0.9960159362549801xw:1xh;center,top&resize=1200:*"
             />
           </div>
-          <div class="bg-amber-100 text-center py-4 h-24 flex-col">
-            <h4>Jack Dorsey</h4>
-            <p>Square / Block</p>
+          <div class="text-center py-4 h-24 flex-col">
+            <h4 class="font-bold">Jack Dorsey</h4>
+            <p class="text-indigo-900">Square / Block</p>
           </div>
         </a>
       </article>
-      <article class="border-2 border-slate-800/75 p-4">
+      <article class="border-2 bg-indigo-50/90 border-slate-300/75 p-4">
         <a href="/mark-zuck">
           <div>
             <img
@@ -35,24 +35,24 @@ const { title } = Astro.props;
               src="https://people.com/thmb/aA--KsaFpaBaiFtbt3Nw4ZeKk24=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/mark-zuckerberg-1-2000-1123e66859e94403b843e5ae6ed368fd.jpg"
             />
           </div>
-          <div class="bg-amber-100 text-center py-4 h-24 flex-col">
-            <h4>Mark Zuck</h4>
-            <p>Meta</p>
+          <div class="text-center py-4 h-24 flex-col">
+            <h4 class="font-bold">Mark Zuck</h4>
+            <p class="text-indigo-900">Meta</p>
           </div>
         </a>
       </article>
-      <article class="border-2 border-slate-800/75 p-4">
+      <article class="border-2 bg-indigo-50/90 border-slate-300/75 p-4">
         <a href="/tim-apple">
           <div>
             <img
-              transition:name="pfp"
+              transition:name="tim-pfp"
               class="rounded-full w-40 h-40 object-cover mb-3"
               src="https://images.lifestyleasia.com/wp-content/uploads/sites/6/2023/04/17155723/tim-cook-net-worth-investment-salary-apple-ceo.jpg"
             />
           </div>
-          <div class="bg-amber-100 text-center py-4 h-24 flex-col">
-            <h4>Tim Apple</h4>
-            <p>Apple</p>
+          <div class="text-center py-4 h-24 flex-col">
+            <h4 class="font-bold">Tim Apple</h4>
+            <p class="text-indigo-900">Apple</p>
           </div>
         </a>
       </article>

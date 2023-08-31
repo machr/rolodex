@@ -3,10 +3,11 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Jack Dorsey">
-  <section class="flex gap-12">
-    <div>
+  <section class="grid grid-cols-2">
+    <div class="">
       <img
-        transition:name=""
+        class="rounded-full w-80 h-80 object-cover"
+        transition:name="jack-pfp"
         src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1146354927.jpg?crop=0.9960159362549801xw:1xh;center,top&resize=1200:*"
         alt=""
       />

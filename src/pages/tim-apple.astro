@@ -1,12 +1,31 @@
 ---
-name: "Tim Cook"
-location: "Cupertino"
-company: "Apple"
-picture: "https://images.lifestyleasia.com/wp-content/uploads/sites/6/2023/04/17155723/tim-cook-net-worth-investment-salary-apple-ceo.jpg"
+import Layout from "../layouts/Layout.astro";
 ---
 
-## Bio
+<Layout title="Tim Cook">
+  <section class="grid grid-cols-2">
+    <div class="">
+      <img
+        class="rounded-full w-80 h-80 object-cover"
+        transition:name="tim-pfp"
+        src="https://images.lifestyleasia.com/wp-content/uploads/sites/6/2023/04/17155723/tim-cook-net-worth-investment-salary-apple-ceo.jpg"
+        alt=""
+      />
+    </div>
+    <div>
+      <div class="mb-14">
+        <p>name: Tim Cook</p>
+        <p>location: Cupertino</p>
+        <p>company: Apple</p>
+      </div>
 
-Timothy Donald Cook is an American business executive who has been the chief executive officer of Apple Inc. since 2011.
-
-Cook previously served as the company's chief operating officer under its co-founder Steve Jobs.
+      <h2 class="text-2xl font-bold mb-4">Biography</h2>
+      <p class="leading-loose">
+        Timothy Donald Cook is an American business executive who has been the
+        chief executive officer of Apple Inc. since 2011. Cook previously served
+        as the company's chief operating officer under its co-founder Steve
+        Jobs.
+      </p>
+    </div>
+  </section>
+</Layout>
