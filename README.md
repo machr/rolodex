@@ -4,6 +4,8 @@
 
 This is the repo for my first attempt.
 
+Note: Couldn't get transitions working when pages are created from Markdown files. I suspect the transition name needs to be unique e.g `pfp-{bio-name}` instead of `profile-picturee`
+
 ![Screenshot of the initial start of Rolodex](public/rolodex-readme.jpeg)
 
 ## 👀 Want to learn more?
