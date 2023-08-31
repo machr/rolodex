@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+interface Props {
+  title: string;
+  frontmatter: {
+    name: string;
+    location: string;
+    company: string;
+  };
+}
+
+const people = await getCollection("people");
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <section>
+    <h1 class="text-4xl font-bold mb-12">People</h1>
+
+    <div class="people flex gap-6">
+      {
+        people.map((person) => (
+          <article class="border-2 border-slate-800/75 p-4">
+            <a href={`/bio/${person.slug}`}>
+              <div>
+                <img
+                  class=" rounded-full w-40 h-40 object-cover mb-3"
+                  src={person.data.picture}
+                  alt={`Picture of ${person.data.name}`}
+                />
+              </div>
+              <div class="bg-amber-100 text-center py-4 h-24 flex-col">
+                <h4>{person.data.name}</h4>
+                <p>{person.data.company}</p>
+              </div>
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</Layout>
